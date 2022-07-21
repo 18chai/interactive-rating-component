@@ -1,0 +1,10 @@
+#app {
+  width: 1440px;
+  height: 800px;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  padding: 195px 514px 189px;
+  background-color: #131518;
+}
+/*# sourceMappingURL=main.css.map */
