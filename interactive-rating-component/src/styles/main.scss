@@ -1,18 +1,26 @@
-body, html {
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
 }
 
 #app {
-    background-color: #131518;
-    height: 100vh;
-  }
+  background-color: #131518;
+  height: 100vh;
+}
 
 .main {
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-items: center;
+  font-family: "Overpass", sans-serif;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+}
+
+.hidden {
+  display: none;
 }

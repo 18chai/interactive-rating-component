@@ -15,11 +15,16 @@
       </p>
       <form class="content-rating">
         <div class="rating rating_container">
-          <div class="rating-icon content-icon">1</div>
-          <div class="rating-icon content-icon">2</div>
-          <div class="rating-icon content-icon">3</div>
-          <div class="rating-icon content-icon">4</div>
-          <div class="rating-icon content-icon">5</div>
+          <input id="1" type="radio" name="rating" value="1" class="hidden" />
+          <label class="rating-icon content-icon" for="1">1</label>
+          <input id="2" type="radio" name="rating" value="2" class="hidden" />
+          <label class="rating-icon content-icon" for="2">2</label>
+          <input id="3" type="radio" name="rating" value="3" class="hidden" />
+          <label class="rating-icon content-icon" for="3">3</label>
+          <input id="4" type="radio" name="rating" value="4" class="hidden" />
+          <label class="rating-icon content-icon" for="4">4</label>
+          <input id="5" type="radio" name="rating" value="5" class="hidden" />
+          <label class="rating-icon content-icon" for="5">5</label>
         </div>
         <div class="rating content-submit">
           <button class="rating-button" type="submit">Submit</button>
@@ -52,8 +57,12 @@ export default defineComponent({
 }
 
 .content {
+  font-family: "Overpass", sans-serif;
   display: flex;
   flex-direction: column;
+  &_container {
+    max-width: 340px;
+  }
   &-icon {
     display: flex;
     width: 3rem;
@@ -67,12 +76,58 @@ export default defineComponent({
       margin: auto;
     }
   }
+  &-heading {
+    color: #fff;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 30px;
+    margin-bottom: 7px;
+  }
+  &-description {
+    color: #969fad;
+    font-size: 0.938rem;
+    line-height: 1.5rem;
+    margin-top: 0px;
+    margin-bottom: 24px;
+  }
 }
 
 .rating {
   &_container {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 32px;
   }
+  &-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: #7c8798;
+    cursor: pointer;
+    &:hover {
+      background-color: #fc7614;
+      color: #fff;
+    }
+  }
+  &-button {
+    width: 341px;
+    height: 45px;
+    padding: 11px 138px 11px 137px;
+    border-radius: 22.5px;
+    background-color: #fc7614;
+    color: #fff;
+    border: 0px;
+    font-size: 0.938rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+}
+input:checked + .rating-icon {
+  background-color: #fc7614;
+  color: #fff;
 }
 </style>
