@@ -51,7 +51,6 @@ export default defineComponent({
   margin: auto;
   width: 412px;
   height: 416px;
-  padding: 2rem;
   border-radius: 30px;
   background-image: radial-gradient(circle at 50% 0, #232a34, #181e27 89%);
 }
@@ -62,6 +61,7 @@ export default defineComponent({
   flex-direction: column;
   &_container {
     max-width: 340px;
+    margin: 32px 40px 32px 32px;
   }
   &-icon {
     display: flex;
